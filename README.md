@@ -1,2 +1,1 @@
-# pythonbyexample
-Python by example
+# Python By Example
