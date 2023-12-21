@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/styles.css' %}" />
+    <title>index</title>
+  </head>
+  <body class="flex justify-center">
+    <div
+      class="grid grid-cols-1 justify-center m-2 max-w-screen-sm min-w-screen-sm"
+    >
+      <span id="python-by-example" class="text-4xl my-4"
+        >Python By Example</span
+      >
+      <span id="hello-world" class="text-3xl mb-2">Hello World</span>
+      <span>
+        Our first program will print the classic “hello world” message. Here's
+        the full source code in file hello-world.py.</span
+      >
+      <code class="bg-gray-200"> print("Hello World!") </code>
+      <span> That's it, seriously! </span>
+      <span> Now run the code and you should get the following output: </span>
+      <code class="bg-gray-200">
+        <span class="text-blue-800">$</span> python3 hello-world.py<br />
+        <span class="text-gray-500">Hello World!</span>
+      </code>
+      <a href="/" class="mt-2 underline">Index</a>
+    </div>
+  </body>
+</html>
