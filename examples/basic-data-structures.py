@@ -10,8 +10,6 @@ my_dict = {"a": 1, "b": 2, "c": 2}
 # A set is an unordered collection of unique elements
 my_set = {1, 2, 3, 4, 4, 5}
 
-# Some common operations
-
 # Adding an element to the collection
 my_list.append(6)
 my_dict["d"] = 3

@@ -35,6 +35,7 @@ for file in files:
             
             html_path = output_path.joinpath(file_path.name.replace(".py", ".html"))
             ready_example = ''.join(formatted_example)
+            print(ready_example)
             with open(html_path, 'w') as f:
                 template=env.get_template("conversion/template.html")
                 f.write(template.render(body=ready_example))
