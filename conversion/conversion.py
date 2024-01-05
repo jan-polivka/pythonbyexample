@@ -11,6 +11,7 @@ env = Environment(
 )
 
 examples_path = pathlib.Path('examples/')
+output_path = pathlib.Path('docs/')
 
 files = os.listdir(examples_path)
 
@@ -32,7 +33,7 @@ for file in files:
                     else:
                         formatted_example.append('<br/>\n')
             
-            html_path = str(file_path).replace(".py", ".html")
+            html_path = output_path.joinpath(file_path.name.replace(".py", ".html"))
             ready_example = ''.join(formatted_example)
             with open(html_path, 'w') as f:
                 template=env.get_template("conversion/template.html")
@@ -40,6 +41,6 @@ for file in files:
 
     
 
-with open(examples_path.joinpath("styles.css"), "w") as f:
+with open(output_path.joinpath("styles.css"), "w") as f:
     f.write(HtmlFormatter(style=css_style).get_style_defs('.highlight'))
     
