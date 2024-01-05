@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="tailwind.css" />
+  </head>
+  <body class="flex justify-center">
+    <div
+      class="grid grid-cols-1 justify-center m-2 max-w-screen-sm min-w-screen-sm"
+    >
+      A list is a collection objects that will keep the order, 
+can be changed and can contain duplicates
+<div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+<br/>
+A dictionary is an unordered collection of key-value pairs.
+Each key is unique but values can be duplicated.
+Just like a list, you can add or remove elements
+<div class="highlight"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+</pre></div>
+<br/>
+A set is an unordered collection of unique elements
+<div class="highlight"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+</pre></div>
+<br/>
+Some common operations
+<br/>
+Adding an element to the collection
+<div class="highlight"><pre><span></span><span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="n">my_dict</span><span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="n">my_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+<br/>
+Removing an element from the collection
+<div class="highlight"><pre><span></span><span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># Remove the nth element from the list</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="n">my_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="n">my_set</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+<br/>
+Check if the element is in the collection
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b&quot;</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="p">)</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">in</span> <span class="n">my_set</span><span class="p">)</span>
+</pre></div>
+<br/>
+Joining two collections
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span> <span class="o">|</span> <span class="p">{</span><span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span> <span class="o">|</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">})</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span><span class="o">.</span><span class="n">union</span><span class="p">({</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">}))</span>
+</pre></div>
+<br/>
+Comprehensions are a pythonic way to create new collections
+from an existing one
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">([</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">])</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">({</span><span class="n">i</span><span class="p">:</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="p">})</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">({</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">my_set</span><span class="p">})</span>
+</pre></div>
+Checkout the "for" page to learn more about loops
+
+    </div>
+  </body>
+</html>
