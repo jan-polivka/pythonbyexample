@@ -8,7 +8,6 @@ else:
 
 # Sometimes, you like one flavour more than the other
 ice_cream_flavour = "vanilla"
-
 if ice_cream_flavour == "vanilla":
     print("I would like two scoops, please")
 elif ice_cream_flavour == "chocolate":
@@ -17,6 +16,7 @@ else:
     print("None for me, thank you")
 # keyword elif allows you to specify further conditions
 # and can be used multiple times
+
 
 # You can also use the match-case matching
 match ice_cream_flavour:

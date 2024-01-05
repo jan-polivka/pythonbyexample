@@ -5,7 +5,6 @@ from pygments.lexers import PythonLexer
 from pygments.formatters import HtmlFormatter
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-print(os.getcwd())
 env = Environment(
     loader=FileSystemLoader('.'),
     autoescape=select_autoescape()
