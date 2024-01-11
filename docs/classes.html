@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="tailwind.css" />
+  </head>
+  <body>
+    <div class="flex justify-center">
+      <div
+        class="grid grid-cols-1 justify-center m-2 max-w-screen-sm min-w-screen-sm"
+      >
+        Define a class simply so
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+</pre></div>
+A class variable can be declared as such
+<div class="highlight"><pre><span></span>    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Person&quot;</span>
+</pre></div>
+<div class="highlight"><pre><span></span>    <span class="n">age</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+<br/>
+The constructor for the class
+<div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+</pre></div>
+<div class="highlight"><pre><span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+</pre></div>
+<div class="highlight"><pre><span></span>        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+</pre></div>
+<br/>
+Despite the constructor accepting three arguments,
+the method gets called only with two arguments
+<br/>
+Note that functions that belong to a class are called methods.
+<br/>
+A class method can be declared as such
+<div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</pre></div>
+<div class="highlight"><pre><span></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+A static method can be declared as such
+<div class="highlight"><pre><span></span>    <span class="nd">@staticmethod</span>
+</pre></div>
+<div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">get_species</span><span class="p">():</span>
+</pre></div>
+<div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="s2">&quot;Homo Sapiens&quot;</span>
+</pre></div>
+<br/>
+To create a new instance of the class, simply call
+<div class="highlight"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+</pre></div>
+<br/>
+To call a method, simply use the dot operator
+<div class="highlight"><pre><span></span><span class="n">person</span><span class="o">.</span><span class="n">hello</span><span class="p">()</span>
+</pre></div>
+<br/>
+
+      </div>
+    </div>
+  </body>
+</html>
