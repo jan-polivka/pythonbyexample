@@ -23,21 +23,9 @@
         >
       </div>
       <div class="m-6 grid grid-cols-1">
-         
-        <a href="hello-world.html" class="underline">Hello World</a>
-          
-        <a href="variables.html" class="underline">Variables</a>
-          
-        <a href="basic-data-structures.html" class="underline">Basic Data Structures</a>
-          
-        <a href="for-loop.html" class="underline">For Loop</a>
-          
-        <a href="flow-control.html" class="underline">Flow Control</a>
-          
-        <a href="functions.html" class="underline">Functions</a>
-          
-        <a href="classes.html" class="underline">Classes</a>
-         
+        {% for example in examples %} {% for key, value in example.items() %}
+        <a href="{{ value }}.html" class="underline">{{ key }}</a>
+        {% endfor %} {% endfor %}
       </div>
       Note that this is basically a copy of
       <a href="https://gobyexample.com/" class="underline">gobyexample.com</a>

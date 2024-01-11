@@ -17,6 +17,15 @@ files = os.listdir(examples_path)
 
 css_style = 'default'
 
+with open(examples_path.joinpath("examples.txt")) as f:
+    example_names = f.read().split("\n")
+    example_mapping = [{name: name.replace(" ", "-").lower()} for name in example_names]
+
+with open(output_path.joinpath("index.html"), 'w') as f:
+    template=env.get_template("conversion/template_index.html")
+    f.write(template.render(examples=example_mapping))
+
+
 for file in files:
     if file.endswith('.py'):
         file_path = examples_path.joinpath(file)
@@ -35,7 +44,6 @@ for file in files:
             
             html_path = output_path.joinpath(file_path.name.replace(".py", ".html"))
             ready_example = ''.join(formatted_example)
-            print(ready_example)
             with open(html_path, 'w') as f:
                 template=env.get_template("conversion/template.html")
                 f.write(template.render(body=ready_example))
